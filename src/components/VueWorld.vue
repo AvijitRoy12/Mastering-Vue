@@ -27,6 +27,37 @@
   <input type="text" placeholder="Email" v-model="email" />
   <input type="password" placeholder="Password" v-model="password" />
   <button v-on:click="getDetails()">Submit</button>
+  <hr />
+  <h2>Select technologies</h2>
+  <label for="java">Java</label>
+  <input type="checkbox" value="java" id="java" v-model="technology" />
+  <br />
+  <label for="python">Python</label>
+  <input type="checkbox" value="python" id="python" v-model="technology" />
+  <br />
+  <label for="javascript">JavaScript</label>
+  <input
+    type="checkbox"
+    value="javascript"
+    id="javascript"
+    v-model="technology"
+  />
+  <br />
+  <h2>{{ technology }}</h2>
+  <br />
+  <h2>Profession</h2>
+  <label for="student">Student</label>
+  <input type="radio" value="student" id="student" name="who" v-model="who" />
+  <br />
+  <label for="professional">Professional</label>
+  <input
+    type="radio"
+    value="professional"
+    id="professional"
+    name="who"
+    v-model="who"
+  />
+  <h2>Technology {{ who }}</h2>
 </template>
 <script>
 export default {
@@ -37,6 +68,8 @@ export default {
       count: 0,
       email: null,
       password: null,
+      technology: [],
+      who: [],
       usage: function () {
         return "Frontend development for complex web applications";
       },
