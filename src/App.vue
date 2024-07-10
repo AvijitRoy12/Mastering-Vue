@@ -1,14 +1,13 @@
 <template>
-  <VueWorld />
+  <ConditionalRendering />
 </template>
 
 <script>
-import VueWorld from "./components/VueWorld.vue";
-
+import ConditionalRendering from "./components/ConditionalRendering.vue";
 export default {
   name: "App",
   components: {
-    VueWorld,
+    ConditionalRendering,
   },
 };
 </script>
