@@ -20,6 +20,9 @@
   <button v-on:click="clickTest()">Click me</button>
   <button v-on:dblclick="doubleClickTest()">Click me</button>
   <h2>{{ count }}</h2>
+  <hr />
+  <input type="text" v-model="count" />
+  <h2>{{ count }}</h2>
 </template>
 <script>
 export default {
