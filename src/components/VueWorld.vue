@@ -23,6 +23,10 @@
   <hr />
   <input type="text" v-model="count" />
   <h2>{{ count }}</h2>
+  <hr />
+  <input type="text" placeholder="Email" v-model="email" />
+  <input type="password" placeholder="Password" v-model="password" />
+  <button v-on:click="getDetails()">Submit</button>
 </template>
 <script>
 export default {
@@ -31,6 +35,8 @@ export default {
     return {
       message: "This is a framework based on JavaScript",
       count: 0,
+      email: null,
+      password: null,
       usage: function () {
         return "Frontend development for complex web applications";
       },
@@ -61,6 +67,9 @@ export default {
     },
     doubleClickTest() {
       return alert("Button is double clicked");
+    },
+    getDetails() {
+      console.log(`Name: ${this.email} Password: ${this.password}`);
     },
   },
 };
